@@ -3,11 +3,11 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['react', '@typescript-eslint', 'prettier'],
     extends: [
-        'airbnb-typescript',
-        'airbnb/hooks',
+        // 'airbnb-typescript',
+        // 'airbnb/hooks',
         'eslint:recommended',
         'plugin:react/recommended',
-        'plugin:@typescript-eslint/recommended',
+        // 'plugin:@typescript-eslint/recommended',
         'prettier',
         'prettier/react',
         'prettier/@typescript-eslint',
@@ -29,6 +29,7 @@ module.exports = {
         // We will use TypeScript's types for component props instead
         'react/prop-types': 'off',
         // We don't want unused vars
-        '@typescript-eslint/no-unused-vars': ['error'],
+        '@typescript-eslint/no-unused-vars': ['warn'],
+        'no-unused-vars': ['warn'],
     },
 };
