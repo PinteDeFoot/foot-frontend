@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useNavigation } from '.';
 import {
   Box,
   Flex,
@@ -17,6 +16,8 @@ import {
   useDisclosure,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import { useNavigation } from '.';
 import { Logo } from '../Logo';
 
 export const Navigation: React.FC = () => {
@@ -44,7 +45,9 @@ export const Navigation: React.FC = () => {
           />
         </Flex>
         <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-          <Logo />
+          <Link as={ReactRouterLink} to="/">
+            <Logo />
+          </Link>
           <Flex display={{ base: 'none', md: 'flex' }} ml={10} align="center">
             <DesktopNav />
           </Flex>
@@ -54,18 +57,20 @@ export const Navigation: React.FC = () => {
           <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
             Sign In
           </Button>
-          <Button
-            display={{ base: 'none', md: 'inline-flex' }}
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'red.400'}
-            _hover={{
-              bg: 'red.300',
-            }}
-          >
-            Sign Up
-          </Button>
+          <Link as={ReactRouterLink} to="/login">
+            <Button
+              display={{ base: 'none', md: 'inline-flex' }}
+              fontSize={'sm'}
+              fontWeight={600}
+              color={'white'}
+              bg={'red.400'}
+              _hover={{
+                bg: 'red.300',
+              }}
+            >
+              Sign Up
+            </Button>
+          </Link>
         </Stack>
       </Flex>
 
