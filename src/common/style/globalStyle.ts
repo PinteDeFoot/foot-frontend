@@ -18,4 +18,10 @@ export const globalStyle = css`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   }
+
+  a {
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
 `;

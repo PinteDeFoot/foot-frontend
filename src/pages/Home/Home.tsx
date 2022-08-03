@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Container, Stack, Flex, Box, Heading, Text, Button, Image } from '@chakra-ui/react';
 import { useHome } from '.';
+import { ArticleCards } from '../../components/ArticleCards';
+import { TopForumItem } from '../../components/TopForumItem';
 
-interface HomeProps {}
-
-export const Home: React.FC = (props: HomeProps) => {
+export const Home: React.FC = () => {
   useHome();
   return (
     <>
@@ -80,6 +80,8 @@ export const Home: React.FC = (props: HomeProps) => {
             </Box>
           </Flex>
         </Stack>
+        <ArticleCards />
+        <TopForumItem />
       </Container>
     </>
   );

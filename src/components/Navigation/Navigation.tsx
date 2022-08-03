@@ -53,11 +53,13 @@ export const Navigation: React.FC = () => {
           </Flex>
         </Flex>
 
-        <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6}>
-          <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
-            Sign In
-          </Button>
+        <Stack flex={{ base: 1, md: 0 }} justify={'flex-end'} direction={'row'} spacing={6} align={'center'}>
           <Link as={ReactRouterLink} to="/login">
+            <Button as={'a'} fontSize={'sm'} fontWeight={400} variant={'link'} href={'#'}>
+              Se connecter
+            </Button>
+          </Link>
+          <Link as={ReactRouterLink} to="/signup">
             <Button
               display={{ base: 'none', md: 'inline-flex' }}
               fontSize={'sm'}
@@ -68,7 +70,7 @@ export const Navigation: React.FC = () => {
                 bg: 'red.300',
               }}
             >
-              Sign Up
+              S&apos;inscrire
             </Button>
           </Link>
         </Stack>
@@ -225,7 +227,7 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: 'Inspiration',
+    label: 'Articles',
     children: [
       {
         label: 'Explore Design Work',
@@ -240,7 +242,7 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'Find Work',
+    label: 'Actus',
     children: [
       {
         label: 'Job Board',
@@ -255,11 +257,11 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'Learn Design',
+    label: 'Forum',
     href: '#',
   },
   {
-    label: 'Hire Designers',
+    label: 'Contact',
     href: '#',
   },
 ];
