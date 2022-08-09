@@ -15,9 +15,7 @@ import {
   Popover,
   PopoverArrow,
   PopoverBody,
-  PopoverCloseButton,
   PopoverContent,
-  PopoverHeader,
   PopoverTrigger,
   HStack,
   Input,
@@ -31,6 +29,7 @@ import { FaRegImage } from 'react-icons/fa';
 import { RiFileGifFill } from 'react-icons/ri';
 
 export const CreateCommentBox = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
   const [tabIndex, setTabIndex] = React.useState(0);
   const [value, setValue] = React.useState('');
 
