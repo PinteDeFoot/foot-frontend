@@ -19,9 +19,12 @@ import { HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from '@ch
 import { Link as ReactRouterLink } from 'react-router-dom';
 import { useNavigation } from '.';
 import { Logo } from '../Logo';
+import { NavItem, NAV_ITEMS } from './constants';
+// import { useStore } from '../../store';
 
 export const Navigation: React.FC = () => {
   const { isOpen, onToggle } = useDisclosure();
+  // const userDetails = useStore((state) => state.userDetails);
   useNavigation();
   return (
     <Box>
@@ -217,51 +220,3 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
     </Stack>
   );
 };
-
-interface NavItem {
-  label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
-  href?: string;
-}
-
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: 'Articles',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
-      },
-    ],
-  },
-  {
-    label: 'Actus',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
-  },
-  {
-    label: 'Forum',
-    href: '#',
-  },
-  {
-    label: 'Contact',
-    href: '#',
-  },
-];

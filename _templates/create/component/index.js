@@ -5,7 +5,7 @@ module.exports = {
         type: 'select',
         name: 'componentType',
         message: 'what type is your component?',
-        choices: ['components', 'pages'],
+        choices: ['components', 'pages', 'components/articles', 'components/comments'],
       },
       {
         type: 'confirm',

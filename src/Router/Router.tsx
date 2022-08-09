@@ -14,7 +14,7 @@ export const Router: React.FC = () => {
           <Route index element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/articles" element={<div>Articles page</div>} />
-          <Route path="/articles/:slug" element={<ArticlePage />} />
+          <Route path="/articles/:id/:slug" element={<ArticlePage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
